@@ -5,7 +5,8 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -21,12 +22,16 @@ public class Test_Steps{
 	
 	
 	
+	
 	@Given("^i navigate to the homepage of automation practice website$")
 	public void i_navigate_to_the_homepage_of_automation_practice_website() throws Throwable {
 		
-		System.setProperty("webdriver.gecko.driver", "\\geckodriver.exe");
-		driver = new FirefoxDriver();
-	   
+		 System.setProperty("webdriver.chrome.driver", "\\chromedriver.exe");
+		 driver = new ChromeDriver();
+		
+		//System.setProperty("webdriver.ie.driver", "\\IEDriverServer.exe");
+		//driver = new InternetExplorerDriver();
+		
 		driver.manage().window().maximize();
 		driver.navigate().to("http://automationpractice.com");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -166,11 +171,10 @@ public class Test_Steps{
 	@When("^i click on the Add to cart button$")
 	public void i_click_on_the_Add_to_cart_button() throws Throwable {
 		
-	    final WebElement AddToCart;
-		WebDriverWait wait=new WebDriverWait(driver, 20);
-		AddToCart= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='exclusive']")));
-		AddToCart.click();
-		
+	   driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@class='fancybox-iframe']")));
+	   driver.findElement(By.cssSelector("#add_to_cart > button > span")).click();
+	   driver.switchTo().defaultContent();
+	   
 	}
 	
 	@Then("^the same item should be added to the cart$")
@@ -196,9 +200,9 @@ public class Test_Steps{
 	@When("^i click on the first proceed to checkout button$")
 	public void i_click_on_the_first_proceed_to_checkout_button() throws Throwable {
 		
-		final WebElement ProceedToCheckout;
+		WebElement ProceedToCheckout;
 		WebDriverWait wait=new WebDriverWait(driver, 20);
-		ProceedToCheckout= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@title='Proceed to checkout']")));
+		ProceedToCheckout= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@class='btn btn-default button button-medium']")));
 		ProceedToCheckout.click();
 		
 	}
