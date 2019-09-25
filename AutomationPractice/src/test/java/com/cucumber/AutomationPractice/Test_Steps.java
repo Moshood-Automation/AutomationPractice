@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -26,11 +27,14 @@ public class Test_Steps{
 	@Given("^i navigate to the homepage of automation practice website$")
 	public void i_navigate_to_the_homepage_of_automation_practice_website() throws Throwable {
 		
-		 System.setProperty("webdriver.chrome.driver", "\\chromedriver.exe");
-		 driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", "\\chromedriver.exe");
+		driver = new ChromeDriver();
 		
 		//System.setProperty("webdriver.ie.driver", "\\IEDriverServer.exe");
 		//driver = new InternetExplorerDriver();
+		 
+		//System.setProperty("webdriver.gecko.driver", "\\geckodriver.exe");
+		//driver = new FirefoxDriver();
 		
 		driver.manage().window().maximize();
 		driver.navigate().to("http://automationpractice.com");
@@ -40,7 +44,21 @@ public class Test_Steps{
 
 	@Given("^i click on the sign in link$")
 	public void i_click_on_the_sign_in_link() throws Throwable {
-		driver.findElement(By.className("login")).click();
+		
+		WebDriverWait wait=new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a.login")));
+		
+		try {
+			driver.findElement(By.xpath("//a[@title='Log in to your customer account']")).click();	
+	}
+		
+		catch(Exception e){
+			driver.findElement(By.cssSelector("a.login")).click();
+	}
+		
+		finally {
+			 System.out.println("Try catch has ended.");
+	}
 		
 	}
 	
@@ -171,16 +189,30 @@ public class Test_Steps{
 	@When("^i click on the Add to cart button$")
 	public void i_click_on_the_Add_to_cart_button() throws Throwable {
 		
+		try { 
+			
 	   driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@class='fancybox-iframe']")));
 	   driver.findElement(By.cssSelector("#add_to_cart > button > span")).click();
 	   driver.switchTo().defaultContent();
+    }
+		
+		catch(Exception e){
+			
+			  System.out.println("There is no frame present."); 
+			  driver.findElement(By.cssSelector("#add_to_cart > button > span")).click();
+	}
+		
+		finally {
+			
+			  System.out.println("The 'try catch' is finished.");  
+	}
 	   
 	}
 	
 	@Then("^the same item should be added to the cart$")
 	public void the_same_item_should_be_added_to_the_cart() throws Throwable {
 		
-		WebDriverWait wait=new WebDriverWait(driver, 20);
+		WebDriverWait wait=new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("layer_cart_product_title")));
 		
 		String ExpectedText ="Faded Short Sleeve T-shirts\nOrange, S\nQuantity 1\nTotal $16.51";
@@ -201,7 +233,7 @@ public class Test_Steps{
 	public void i_click_on_the_first_proceed_to_checkout_button() throws Throwable {
 		
 		WebElement ProceedToCheckout;
-		WebDriverWait wait=new WebDriverWait(driver, 20);
+		WebDriverWait wait=new WebDriverWait(driver, 10);
 		ProceedToCheckout= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@class='btn btn-default button button-medium']")));
 		ProceedToCheckout.click();
 		
@@ -282,7 +314,7 @@ public class Test_Steps{
 		  
 		  if (driver.findElement(By.xpath("//li[@class='twitter']")).isDisplayed()) 
 		    	  System.out.println("PASS"); 
-		  else {
+		   else {
 			  System.out.println("FAIL");   
 		  }
 		      
@@ -298,4 +330,4 @@ public class Test_Steps{
 
 
 
-}
+    }

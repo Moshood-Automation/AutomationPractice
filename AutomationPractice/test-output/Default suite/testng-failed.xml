@@ -3,18 +3,19 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="com.cucumber.AutomationPractice.BatchRunner"/>
+      <class name="com.cucumber.AutomationPractice.Test_Steps"/>
+      <class name="com.cucumber.AutomationPractice.BatchRunnerTest"/>
     </classes>
   </test> <!-- Default test -->
   <test name="Default test(failed)">
     <classes>
-      <class name="com.cucumber.AutomationPractice.BatchRunner">
+      <class name="com.cucumber.AutomationPractice.BatchRunnerTest">
         <methods>
           <include name="setUpClass"/>
           <include name="feature" invocation-numbers="3"/>
           <include name="tearDownClass"/>
         </methods>
-      </class> <!-- com.cucumber.AutomationPractice.BatchRunner -->
+      </class> <!-- com.cucumber.AutomationPractice.BatchRunnerTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
