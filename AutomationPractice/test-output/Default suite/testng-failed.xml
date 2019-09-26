@@ -3,7 +3,6 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="com.cucumber.AutomationPractice.Test_Steps"/>
       <class name="com.cucumber.AutomationPractice.BatchRunnerTest"/>
     </classes>
   </test> <!-- Default test -->

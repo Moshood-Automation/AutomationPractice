@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\USER\AppData\Local\Temp\testng-eclipse--1336905429\testng-customsuite.xml</span>
+                    <span>C:\Users\USER\AppData\Local\Temp\testng-eclipse-2143403131\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -116,12 +116,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.cucumber.AutomationPractice.BatchRunnerTest" hash-for-method="feature(Checkout Test)">feature(Checkout Test)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.cucumber.AutomationPractice.BatchRunnerTest" hash-for-method="feature(Twitter Logo Test)">feature(Twitter Logo Test)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.cucumber.AutomationPractice.BatchRunnerTest" hash-for-method="feature(Search Test)">feature(Search Test)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -131,12 +126,17 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.cucumber.AutomationPractice.BatchRunnerTest" hash-for-method="feature(Twitter Logo Test)">feature(Twitter Logo Test)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.cucumber.AutomationPractice.BatchRunnerTest" hash-for-method="feature(Add An Item To Cart Test)">feature(Add An Item To Cart Test)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.cucumber.AutomationPractice.BatchRunnerTest" hash-for-method="feature(Search Test)">feature(Search Test)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.cucumber.AutomationPractice.BatchRunnerTest" hash-for-method="feature(Checkout Test)">feature(Checkout Test)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -163,13 +163,16 @@
                   </a> <!-- feature(Register Test) -->
                   <span class="method-name">feature</span>
                   <span class="parameters">(Register Test)</span>
-                  <div class="stack-trace">cucumber.runtime.CucumberException: org.openqa.selenium.NoSuchElementException: Unable to find element with css selector == #id_gender1
+                  <div class="stack-trace">cucumber.runtime.CucumberException: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;id_gender1&quot;}
+  (Session info: chrome=76.0.3809.132)
+  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.18362 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-PJAL084&apos;, ip: &apos;192.168.43.202&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:36796/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 90d91299-e8cf-4fc9-b186-929d4f14e079
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\USER\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:59533}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 76.0.3809.132, webStorageEnabled: true}
+Session ID: c40d6e7809e1676186b5272d2f857f33
 *** Element info: {Using=id, value=id_gender1}
 	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
 	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
@@ -197,21 +200,26 @@ Session ID: 90d91299-e8cf-4fc9-b186-929d4f14e079
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to find element with css selector == #id_gender1
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;id_gender1&quot;}
+  (Session info: chrome=76.0.3809.132)
+  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.18362 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-PJAL084&apos;, ip: &apos;192.168.43.202&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:36796/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 90d91299-e8cf-4fc9-b186-929d4f14e079
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\USER\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:59533}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 76.0.3809.132, webStorageEnabled: true}
+Session ID: c40d6e7809e1676186b5272d2f857f33
 *** Element info: {Using=id, value=id_gender1}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
@@ -219,7 +227,7 @@ Session ID: 90d91299-e8cf-4fc9-b186-929d4f14e079
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
 	at org.openqa.selenium.By$ById.findElement(By.java:188)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at com.cucumber.AutomationPractice.Test_Steps.i_fill_the_form(Test_Steps.java:78)
+	at com.cucumber.AutomationPractice.Test_Steps.i_fill_the_form(Test_Steps.java:81)
 	at ✽.When i fill the form(Register-New-User-Test.feature:12)
 
 </div> <!-- stack-trace -->
@@ -237,20 +245,10 @@ Session ID: 90d91299-e8cf-4fc9-b186-929d4f14e079
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="feature(Checkout Test)">
-                  </a> <!-- feature(Checkout Test) -->
+                  <a name="feature(Search Test)">
+                  </a> <!-- feature(Search Test) -->
                   <span class="method-name">feature</span>
-                  <span class="parameters">(Checkout Test)</span>
-                  <em>
-(Runs Cucumber Feature)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="feature(Twitter Logo Test)">
-                  </a> <!-- feature(Twitter Logo Test) -->
-                  <span class="method-name">feature</span>
-                  <span class="parameters">(Twitter Logo Test)</span>
+                  <span class="parameters">(Search Test)</span>
                   <em>
 (Runs Cucumber Feature)                  </em>
                 </div> <!-- method-content -->
@@ -267,6 +265,16 @@ Session ID: 90d91299-e8cf-4fc9-b186-929d4f14e079
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="feature(Twitter Logo Test)">
+                  </a> <!-- feature(Twitter Logo Test) -->
+                  <span class="method-name">feature</span>
+                  <span class="parameters">(Twitter Logo Test)</span>
+                  <em>
+(Runs Cucumber Feature)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="feature(Add An Item To Cart Test)">
                   </a> <!-- feature(Add An Item To Cart Test) -->
                   <span class="method-name">feature</span>
@@ -277,10 +285,10 @@ Session ID: 90d91299-e8cf-4fc9-b186-929d4f14e079
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="feature(Search Test)">
-                  </a> <!-- feature(Search Test) -->
+                  <a name="feature(Checkout Test)">
+                  </a> <!-- feature(Checkout Test) -->
                   <span class="method-name">feature</span>
-                  <span class="parameters">(Search Test)</span>
+                  <span class="parameters">(Checkout Test)</span>
                   <em>
 (Runs Cucumber Feature)                  </em>
                 </div> <!-- method-content -->
@@ -290,7 +298,7 @@ Session ID: 90d91299-e8cf-4fc9-b186-929d4f14e079
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\USER\AppData\Local\Temp\testng-eclipse--1336905429\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\USER\AppData\Local\Temp\testng-eclipse-2143403131\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -299,7 +307,6 @@ Session ID: 90d91299-e8cf-4fc9-b186-929d4f14e079
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.cucumber.AutomationPractice.Test_Steps&quot;/&gt;
       &lt;class name=&quot;com.cucumber.AutomationPractice.BatchRunnerTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
@@ -325,7 +332,7 @@ Session ID: 90d91299-e8cf-4fc9-b186-929d4f14e079
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (2 classes)</span>
+                <span class="test-name">Default test (1 class)</span>
               </li>
               <li>
                 <span class="test-name">Default test(failed) (1 class)</span>
@@ -366,32 +373,32 @@ data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'feature')
 data.setCell(0, 2, 'com.cucumber.AutomationPractice.BatchRunnerTest')
-data.setCell(0, 3, 108312);
+data.setCell(0, 3, 175065);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'feature')
 data.setCell(1, 2, 'com.cucumber.AutomationPractice.BatchRunnerTest')
-data.setCell(1, 3, 58773);
+data.setCell(1, 3, 65153);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'feature')
 data.setCell(2, 2, 'com.cucumber.AutomationPractice.BatchRunnerTest')
-data.setCell(2, 3, 47947);
+data.setCell(2, 3, 63905);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'feature')
 data.setCell(3, 2, 'com.cucumber.AutomationPractice.BatchRunnerTest')
-data.setCell(3, 3, 39017);
+data.setCell(3, 3, 58535);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'feature')
 data.setCell(4, 2, 'com.cucumber.AutomationPractice.BatchRunnerTest')
-data.setCell(4, 3, 36615);
+data.setCell(4, 3, 58010);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'feature')
 data.setCell(5, 2, 'com.cucumber.AutomationPractice.BatchRunnerTest')
-data.setCell(5, 3, 12132);
+data.setCell(5, 3, 18766);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 minutes</span>
+              <span class="suite-total-time">Total running time: 7 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -424,33 +431,33 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">feature(Add An Item To Cart Test)</span>
-                <span class="method-start">854 ms</span>
+                <span class="method-start">761 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">feature(Checkout Test)</span>
-                <span class="method-start">59632 ms</span>
+                <span class="method-start">64670 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">feature(Login Test)</span>
-                <span class="method-start">98651 ms</span>
+                <span class="method-start">122682 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">feature(Register Test)</span>
-                <span class="method-start">206966 ms</span>
+                <span class="method-start">297750 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">feature(Search Test)</span>
-                <span class="method-start">254919 ms</span>
+                <span class="method-start">356293 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">feature(Twitter Logo Test)</span>
-                <span class="method-start">291536 ms</span>
+                <span class="method-start">421448 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">303675 ms</span>
+                <span class="method-start">440216 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

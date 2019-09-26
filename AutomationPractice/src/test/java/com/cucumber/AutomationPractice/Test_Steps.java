@@ -273,12 +273,12 @@ public class Test_Steps{
 		public void i_enter_a_search_keyword() throws Throwable {
 		  driver.findElement(By.id("search_query_top")).sendKeys("Blouse");
 		  	
-		}
+	}
 		
 		@When("^I click the search button$")
 		public void i_click_the_search_button() throws Throwable {
 		   driver.findElement(By.name("submit_search")).click();
-		}
+	}
 		
 		@Then("^the searched item should be displayed$")
 		public void the_searched_item_should_be_displayed() throws Throwable {
@@ -286,13 +286,13 @@ public class Test_Steps{
 		  Assert.assertEquals("\"BLOUSE\"", driver.findElement(By.xpath("//span[@class='lighter']")).getText());
 		  System.out.println( driver.findElement(By.xpath("//span[@class='lighter']")).getText());
 		  
-		}
+	}
 		
 		@When("^I enter an item in the search input box$")
 		public void i_enter_an_item_in_the_search_input_box() throws Throwable {
 			 driver.findElement(By.id("search_query_top")).sendKeys("Dress");
 		   
-		}
+	}
 		
 		@Then("^the search result should be displayed$")
 		public void the_search_result_should_be_displayed() throws Throwable {
@@ -300,12 +300,12 @@ public class Test_Steps{
 		 Assert.assertEquals("\"DRESS\"", driver.findElement(By.xpath("//span[@class='lighter']")).getText());
 		 System.out.println( driver.findElement(By.xpath("//span[@class='lighter']")).getText());
 		   
-		}
+	}
 		
 		@Given("^i check that twitter logo is displayed on that page$")
 		public void i_check_that_twitter_logo_is_displayed_on_that_page() throws Throwable {
 		     driver.findElement(By.xpath("//li[@class='twitter']")).isDisplayed();
-		}
+	}
 		
 		@Then("^twitter logo should be displayed$")
 		public void twitter_logo_should_be_displayed() throws Throwable {
@@ -316,16 +316,16 @@ public class Test_Steps{
 		    	  System.out.println("PASS"); 
 		   else {
 			  System.out.println("FAIL");   
-		  }
+	 }
 		      
-		      }
+	 }
 		 
 		    	  
 	@After
-	public void TearDown() {
+    public void TearDown() {
 		driver.close();
 		
-	}
+	 }
 
 
 
