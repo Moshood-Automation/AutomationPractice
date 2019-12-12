@@ -3,7 +3,7 @@
 @LoginTest
 Feature: Login Test
 
-  Background: 
+  Background:
     Given i navigate to the homepage of automation practice website
     And i click on the sign in link
     

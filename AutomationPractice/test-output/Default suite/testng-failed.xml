@@ -11,7 +11,7 @@
       <class name="com.cucumber.AutomationPractice.BatchRunnerTest">
         <methods>
           <include name="setUpClass"/>
-          <include name="feature" invocation-numbers="3"/>
+          <include name="feature" invocation-numbers="1"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- com.cucumber.AutomationPractice.BatchRunnerTest -->

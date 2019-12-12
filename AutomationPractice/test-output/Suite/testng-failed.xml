@@ -6,15 +6,4 @@
       <class name="com.cucumber.AutomationPractice.BatchRunnerTest"/>
     </classes>
   </test> <!-- Test -->
-  <test name="Test(failed)">
-    <classes>
-      <class name="com.cucumber.AutomationPractice.BatchRunnerTest">
-        <methods>
-          <include name="setUpClass"/>
-          <include name="feature" invocation-numbers="3"/>
-          <include name="tearDownClass"/>
-        </methods>
-      </class> <!-- com.cucumber.AutomationPractice.BatchRunnerTest -->
-    </classes>
-  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
