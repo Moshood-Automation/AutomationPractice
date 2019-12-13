@@ -59,7 +59,7 @@ public class Test_Steps{
 	
 	@Given("^i click create an account link$")
 	public void i_click_create_an_account_link() throws Throwable {
-	   driver.findElement(By.xpath("//*[@id='SubmitCreate']/span")).click();	
+		  driver.findElement(By.cssSelector("button#SubmitCreate")).click();	
 	}
 	
 	@When("^i fill the form$")
@@ -81,39 +81,38 @@ public class Test_Steps{
 	  	
 	  	driver.findElement(By.cssSelector("input#newsletter")).click();
 	  	driver.findElement(By.cssSelector("input#company")).sendKeys("Zara UK");
-	  	driver.findElement(By.name("address1")).sendKeys("3003 transport street");
-	  	driver.findElement(By.id("address2")).sendKeys("Albuquerque");
-	  	driver.findElement(By.name("city")).sendKeys("New Mexico");
+		driver.findElement(By.cssSelector("input#address1")).sendKeys("3003 transport street");
+		driver.findElement(By.cssSelector("input#address2")).sendKeys("Albuquerque");
+		driver.findElement(By.cssSelector("input#city")).sendKeys("New Mexico");
 	  	
-	  	Select drpState = new Select(driver.findElement(By.id("id_state")));
+	  	Select drpState = new Select(driver.findElement(By.cssSelector("select#id_state")));
 	  	drpState.selectByValue("31");
 	  	
-	  	driver.findElement(By.id("postcode")).sendKeys("87106");
-	  	driver.findElement(By.id("other")).sendKeys("I have a UK address");
-	  	driver.findElement(By.name("phone_mobile")).sendKeys("7863340385");
-	  	driver.findElement(By.id("alias")).clear();
-	  	driver.findElement(By.id("alias")).sendKeys("home");
+	  	driver.findElement(By.cssSelector("input#postcode")).sendKeys("87106");
+	  	driver.findElement(By.cssSelector("textarea#other")).sendKeys("I have a UK address");
+	  	driver.findElement(By.cssSelector("input#phone_mobile")).sendKeys("7863340385");
+	  	driver.findElement(By.cssSelector("input#alias")).clear();
+	  	driver.findElement(By.cssSelector("input#alias")).sendKeys("home");
 	  		  	
 	}
 	
 	@When("^i click the register button$")
 	public void i_click_the_register_button() throws Throwable {
-		driver.findElement(By.xpath("//*[@id=\'submitAccount\']/span")).click();
-	   
+		driver.findElement(By.cssSelector("button#submitAccount")).click();
 	}
 
 	@Then("^my account should be created$")
 	public void my_account_should_be_created() throws Throwable {
 	    
 		String ExpectedMessage = "Sign out";
-		String ActualMessage = driver.findElement(By.className("logout")).getText();
+		String ActualMessage = driver.findElement(By.cssSelector("a.logout")).getText();
 		Assert.assertEquals(ActualMessage , ExpectedMessage);
 		System.out.println(ActualMessage);	   
 	}
 	
 	@Then("^i log out$")
 	public void i_log_out() throws Throwable {
-		driver.findElement(By.className("logout")).click();	
+		driver.findElement(By.cssSelector("a.logout")).click();	
 	}
 
 	@When("^i enter valid email address$")
