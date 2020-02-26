@@ -8,7 +8,7 @@ Feature: Add An Item To Cart Test
     And i click on the sign in link
     
 @AddAnItemToCartTest
-  Scenario: As a registered user i want to login successfully with valid details
+  Scenario: As a registered user i want to be able to add an item to cart successfully
     When i enter valid email address
     And i enter a  valid password
     And i click the sign in button
